@@ -234,7 +234,7 @@ export const projects: Project[] = [
       [
         t("폰트 서브셋 분리와 "),
         b("favicon 경량화로 폰트 용량 4,090KB → 1,048KB, favicon 로딩 27초 → 168ms로 개선"),
-        t("했습니다.("),
+        t("했습니다. ("),
         link(
           "Link",
           "https://velog.io/@gse06044/Next.js-font%EC%99%80-icon-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%8B%9C%EC%BC%9C%EB%B3%B4%EA%B8%B0",
