@@ -137,8 +137,9 @@ export const experience: {
     ],
   },
   {
-    heading: [t("멋쟁이 사자처럼 8기 프론트엔드 스쿨(24.08 ~ 25.03)")],
+    heading: [t("멋쟁이 사자처럼 8기 프론트엔드 스쿨")],
     headingLevel: "h3",
+    period: "2024.08 – 2025.03",
     bullets: [
       [
         t(
