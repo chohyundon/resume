@@ -224,7 +224,12 @@ export default function Home() {
                     </p>
                     <Label>프로젝트 소개</Label>
                     <Paragraph>{project.description}</Paragraph>
-                    <Label>성과</Label>
+                    <Label>{project.achievementsLabel ?? "성과"}</Label>
+                    {project.achievementsIntro && (
+                      <Paragraph>
+                        <RichText segments={project.achievementsIntro} />
+                      </Paragraph>
+                    )}
                     <Bullets items={project.achievements} />
                     <Label>
                       <RichText segments={project.aiWorkflowLabel} />
