@@ -64,7 +64,7 @@ function Paragraph({ children }: { children: React.ReactNode }) {
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-1 mt-4 font-medium text-[rgb(55,53,47)] dark:text-neutral-200">
+    <p className="mb-1 mt-7 font-medium text-[rgb(55,53,47)] dark:text-neutral-200">
       {children}
     </p>
   );
