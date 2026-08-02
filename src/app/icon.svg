@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#171717"/>
+  <text
+    x="27"
+    y="35"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Pretendard, 'Apple SD Gothic Neo', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-weight="800"
+    font-size="26"
+    letter-spacing="-1"
+    fill="#ffffff"
+  >HD</text>
+  <circle cx="48" cy="48" r="6" fill="#d9730d"/>
+</svg>
