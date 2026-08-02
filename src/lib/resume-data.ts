@@ -54,10 +54,10 @@ export const aboutMe: {
     bullets: [
       [
         t(
-          "Cursor, Claude Code가 구현 계획과 변경 범위를 먼저 제시하도록 구성하고,",
+          "Cursor, Claude Code가 구현 계획과 변경 범위를 먼저 제시하도록 구성하고, ",
         ),
-        hl("직접 검토,승인한 뒤."),
-        t("개발을 진행합니다."),
+        hl("직접 검토, 승인한 뒤"),
+        t(" 개발을 진행합니다."),
       ],
       [
         t("AI가 수행한 UI 변경을 팀원이 빠르게 확인할 수 있도록 PR에 "),
@@ -107,9 +107,9 @@ export const experience: {
         ),
       ],
       [
-        t(
-          "로그인 연동 중 발생한 CORS 오류를 백엔드 개발자와 함께 네트워크 요청과 서버 설정까지 점검하며, 문제 상황과 확인 결과를 공유해 원인을 해결했습니다.",
-        ),
+        t("로그인 연동 중 발생한 CORS 오류를 백엔드 개발자와 함께 "),
+        hl("네트워크 요청과 서버 설정까지 점검"),
+        t("하며, 문제 상황과 확인 결과를 공유해 원인을 해결했습니다."),
       ],
     ],
   },
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     title: "BlogAi - AI 기술 블로그 작성 플랫폼",
     stack: ["Next.js 16", "TypeScript", "Supabase", "FSD"],
     description:
-      "주제와 키워드를 입력하면 TIL, 트러블슈팅, 딥다이브 3가지 형식의 기술 블로그 포스트를 AI가 자동 생성하는 Next.js 풀스택 서비스입니다. 기획, 설계, 개발, 배포까지 단독으로 진행했습니다.",
+      "블로그 글 120편을 쓰며 TIL·트러블슈팅·딥다이브 형식에 맞춰 매번 글 구조를 새로 고민하는 데 시간이 드는 걸 느껴, 주제와 키워드를 입력하면 이 3가지 형식의 기술 블로그 포스트를 AI가 자동 생성하는 Next.js 풀스택 서비스를 만들었습니다. 기획, 설계, 개발, 배포까지 단독으로 진행했습니다.",
     achievements: [
       [
         t(
@@ -318,11 +318,13 @@ export const projects: Project[] = [
   },
 ];
 
-export const skills = [
-  "JavaScript, TypeScript, CSS, HTML",
-  "React, Next.js",
-  "react-query, zustand",
-  "tailwindCss, styled-component",
+export const skills: Rich[] = [
+  [b("Language: "), t("JavaScript, TypeScript")],
+  [b("Framework: "), t("React, Next.js (App Router)")],
+  [b("State/Data: "), t("TanStack Query, Zustand")],
+  [b("Styling: "), t("Tailwind CSS, styled-components")],
+  [b("Backend/Infra: "), t("Supabase, Vercel")],
+  [b("Tools: "), t("Git, GitHub Actions, Playwright, Claude Code, Cursor")],
 ];
 
 export const education = "대진대학교 경제학과 졸업(2018.03 ~ 2025.08)";

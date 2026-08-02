@@ -242,7 +242,7 @@ export default function Home() {
         {/* Skills */}
         <section>
           <SectionHeader>Skills</SectionHeader>
-          <Bullets items={skills.map((s) => [{ text: s }])} />
+          <Bullets items={skills} />
         </section>
 
         <Divider />
