@@ -10,7 +10,8 @@ export const blogMention: LinkMention = {
   label: "blog",
   href: "https://gse06044.tistory.com/",
   title: "도니 House",
-  iconUrl: "https://t1.daumcdn.net/tistory_admin/favicon/tistory_favicon_32x32.ico",
+  iconUrl:
+    "https://t1.daumcdn.net/tistory_admin/favicon/tistory_favicon_32x32.ico",
 };
 
 export const githubMention: LinkMention = {
@@ -34,45 +35,38 @@ export const aboutMe: {
     bullets: [
       [
         t(
-          "IT 동아리에서 Git 협업에 어려움을 겪는 부원들을 위해, 직접 경험한 시행착오를 바탕으로 Git Flow와 GitHub Flow를 비교하고 소규모 프로젝트에 맞는 브랜치 PR 활용 방법을 세션으로 공유했습니다. 현재까지 블로그 글 120편과 유튜브 쇼츠 8편을 제작하며 오류의 원인과 해결 과정, 기술 선택의 근거를 기록하고 있습니다.",
+          "IT 동아리에서 Git 협업에 어려움을 겪는 부원들을 위해, 직접 경험한 시행착오를 바탕으로 Git Flow와 GitHub Flow를 비교하고 소규모 프로젝트에 맞는 브랜치 PR 활용 방법을 세션으로 공유했습니다. 현재까지 ",
         ),
+        hl(
+          "블로그 글 120편과 유튜브 쇼츠 8편을 제작하며 오류의 원인과 해결 과정, 기술 선택의 근거",
+        ),
+        t("를 기록하고 있습니다."),
       ],
     ],
   },
+
   {
-    subheading: [t("새로운 기술을 직접 적용하고, 결과로 검증합니다.")],
-    bullets: [
-      [
-        code("useOptimistic"),
-        t(", "),
-        code("useSyncExternalStore"),
-        t(
-          " 등 익숙하지 않은 기술도 문제에 적합한지 검토한 뒤 프로젝트에 적용했습니다. 또한 Claude Code 커스텀 스킬과 Playwright MCP를 활용해 아키텍처 검증과 E2E 테스트 과정을 자동화하고, 성능 수치와 검증 결과로 효과를 확인했습니다.",
-        ),
-      ],
-    ],
-  },
-  {
-    subheading: [t("AI 활용")],
-    paragraph: [
-      t("AI를 코드 생성에만 사용하지 않고 "),
-      hl("계획,검토,기록이 가능한 개발 과정"),
-      t("으로 활용합니다."),
+    subheading: [
+      t("AI를 "),
+      hl("검증 가능한 개발 프로세스"),
+      t("의 일부로 활용합니다."),
     ],
     bullets: [
       [
         t(
-          "Cursor, Claude Code가 구현 계획과 변경 범위를 먼저 제시하도록 구성하고, 직접 검토,승인한 뒤 개발을 진행합니다.",
+          "Cursor, Claude Code가 구현 계획과 변경 범위를 먼저 제시하도록 구성하고,",
         ),
+        hl("직접 검토,승인한 뒤."),
+        t("개발을 진행합니다."),
+      ],
+      [
+        t("AI가 수행한 UI 변경을 팀원이 빠르게 확인할 수 있도록 PR에 "),
+        hl("작업 목적과 영향 범위, 변경 전후 UI를 함께"),
+        t("기록합니다."),
       ],
       [
         t(
-          "AI가 수행한 UI 변경을 팀원이 빠르게 확인할 수 있도록 PR에 작업 목적과 영향 범위, 변경 전후 UI를 함께 기록합니다.",
-        ),
-      ],
-      [
-        t(
-          "Supabase MCP로 테이블 구조와 데이터 관계를 조회해 반복적인 탐색을 줄이고, 생성된 쿼리와 코드는 직접 검증한 뒤 반영합니다.",
+          "AI가 생성한 코드가 팀 컨벤션과 어긋나지 않도록 Cursor 룰 파일(.mdc)로 커밋 컨벤션과 코드 리뷰 체크리스트를 구성해, 검토 없이 반영되는 코드가 없도록 관리합니다.",
         ),
       ],
     ],
@@ -92,7 +86,7 @@ export const experience: {
     bullets: [
       [
         b("BlogAI를 "),
-        hl("기획부터 디자인, 프론트엔드, 벡엔드 개발까지 단독으로 진행"),
+        t("기획부터 디자인, 프론트엔드, 벡엔드 개발까지 단독으로 진행"),
         t("하며 서비스 전반을 책임졌습니다."),
       ],
       [
@@ -154,8 +148,8 @@ export const experience: {
     ],
   },
   {
-    heading: [t("블레이버스 해커톤")],
-    headingLevel: "plain",
+    heading: [b("블레이버스 해커톤")],
+    headingLevel: "h3",
     bullets: [
       [
         t("디자이너, 백엔드 개발자와 협업해 "),
@@ -170,8 +164,8 @@ export const experience: {
     ],
   },
   {
-    heading: [t("Build with AI Seoul 2026, GDGoC 해커톤 "), b("행사 스태프")],
-    headingLevel: "plain",
+    heading: [b("Build with AI Seoul 2026, GDGoC 해커톤 "), b("행사 스태프")],
+    headingLevel: "h3",
     bullets: [
       [
         t(
@@ -200,7 +194,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     shortName: "BlogAi",
-    logo: { src: "/images/blogai-logo.svg", width: 520, height: 160, dark: true },
+    logo: {
+      src: "/images/blogai-logo.svg",
+      width: 520,
+      height: 160,
+      dark: true,
+    },
     site: "https://www.blogai.store/",
     github: "https://github.com/chohyundon/BlogAi",
     type: [t("개인프로젝트")],
@@ -214,7 +213,7 @@ export const projects: Project[] = [
         t(
           "useSyncExternalStore로 sessionStorage 기반 생성 상태를 동기화하여 SSR/CSR 하이드레이션 불일치 해결, 페이지 이탈 후에도 생성 상태를 유지해 ",
         ),
-        b("요청당 약 2,000 토큰 낭비를 방지"),
+        hl("요청당 약 2,000 토큰 낭비를 방지"),
         t("했습니다. ("),
         link(
           "Link",
@@ -224,7 +223,7 @@ export const projects: Project[] = [
       ],
       [
         t("React 19 useOptimistic으로 "),
-        b("글 삭제 UI 반영 지연을 2.4초에서 0.3초로 단축"),
+        hl("글 삭제 UI 반영 지연을 2.4초에서 0.3초로 단축"),
         t("했습니다. ("),
         link(
           "Link",
@@ -234,7 +233,9 @@ export const projects: Project[] = [
       ],
       [
         t("폰트 서브셋 분리와 "),
-        b("favicon 경량화로 폰트 용량 4,090KB → 1,048KB, favicon 로딩 27초 → 168ms로 개선"),
+        hl(
+          "favicon 경량화로 폰트 용량 4,090KB → 1,048KB, favicon 로딩 27초 → 168ms로 개선",
+        ),
         t("했습니다. ("),
         link(
           "Link",
@@ -259,7 +260,12 @@ export const projects: Project[] = [
   },
   {
     shortName: "사부작사부작",
-    logo: { src: "/images/sabujak-logo.svg", width: 112, height: 40, dark: true },
+    logo: {
+      src: "/images/sabujak-logo.svg",
+      width: 112,
+      height: 40,
+      dark: true,
+    },
     site: "https://waffle-hyungdonless-front-end.vercel.app/",
     github: "https://github.com/chohyundon/waffle-hyungdonless-frontEnd",
     type: [t("팀프로젝트 (백엔드1, 디자이너2) · 프론트엔드 담당")],
@@ -271,8 +277,10 @@ export const projects: Project[] = [
     achievements: [
       [
         t(
-          "홈 화면 금융교육, 직업정보 위젯에 Next.js fetch 캐싱(revalidate: 3600)을 적용해, 캐시 히트 시 외부 API 왕복(약 2,400ms)을 생략했습니다. (",
+          "홈 화면 금융교육, 직업정보 위젯에 Next.js fetch 캐싱(revalidate: 3600)을 적용해, ",
         ),
+        hl("캐시 히트 시 외부 API 왕복(약 2,400ms)을 생략"),
+        t("했습니다. ("),
         link(
           "Link",
           "https://velog.io/@gse06044/Next.js-fetch-%EC%BA%90%EC%8B%B1%EC%9C%BC%EB%A1%9C-%EA%B3%B5%EA%B3%B5-API-%EC%9D%91%EB%8B%B5-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0",
@@ -281,13 +289,17 @@ export const projects: Project[] = [
       ],
       [
         t(
-          "청년정책 API 2,000건 전체 호출 구조를 Supabase DB 동기화와 서버사이드 페이지네이션(9건/페이지)으로 전환해, 응답 시간을 2,448ms → 68ms(97% 단축)로 개선했습니다.",
+          "청년정책 API 2,000건 전체 호출 구조를 Supabase DB 동기화와 서버사이드 페이지네이션(9건/페이지)으로 전환해, ",
         ),
+        hl("응답 시간을 2,448ms → 68ms(97% 단축)로 개선"),
+        t("했습니다."),
       ],
       [
         t(
-          "React 19 useOptimistic·startTransition으로 댓글 삭제/수정 시 UI를 즉시 반영해, 1~2초의 반응 지연을 제거하고 실패 시 자동 롤백을 구현했습니다.",
+          "React 19 useOptimistic·startTransition으로 댓글 삭제/수정 시 UI를 즉시 반영해, ",
         ),
+        hl("1~2초의 반응 지연을 제거"),
+        t("하고 실패 시 자동 롤백을 구현했습니다."),
       ],
     ],
     aiWorkflowLabel: [t("AI 워크플로우 설계 ("), code("Claude Code"), t(")")],
