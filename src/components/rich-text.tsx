@@ -36,7 +36,7 @@ export function RichText({ segments }: { segments: Rich }) {
         }
 
         if (seg.bold) {
-          node = <strong className="font-semibold">{node}</strong>;
+          node = <strong className="font-bold">{node}</strong>;
         }
 
         return <span key={i}>{node}</span>;
