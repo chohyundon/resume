@@ -2,7 +2,7 @@
 
 원인을 보는 개발자, 조현돈의 이력서 사이트입니다. Notion으로 작성된 원본 이력서를 Next.js로 옮겨 제작했습니다.
 
-- **배포**: https://resume-mu-bice.vercel.app
+- **배포**: https://www.hyundon.site/
 - **원본**: [Notion 이력서 템플릿](https://raspy-recorder-35e.notion.site/70d384f16ec3821c91f70171af2cd365)
 
 ## 스택
@@ -42,4 +42,5 @@ vercel --prod
 
 ## 변경 이력
 
+- 2026.08.02: 커스텀 도메인(https://www.hyundon.site/)으로 배포 주소 변경
 - 2026.08.01: 멋쟁이 사자처럼 8기 경력 항목의 날짜 표기를 다른 항목과 동일한 형식(`YYYY.MM – YYYY.MM`)으로 통일
