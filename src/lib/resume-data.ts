@@ -125,7 +125,7 @@ export const experience: {
       ],
       [
         t(
-          "직접 협업하며 겪은 시행착오를 바탕으로 Git Flow와 GitHub Flow를 비교하고, 소규모 프로젝트에서 활용할 브랜치·PR 방식을 정리해 세션을 진행했습니다.",
+          "직접 협업하며 겪은 시행착오를 바탕으로 Git Flow와 GitHub Flow를 비교하고, 소규모 프로젝트에서 활용할 브랜치 PR 방식을 정리해 세션을 진행했습니다.",
         ),
       ],
     ],
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     title: "BlogAi - AI 기술 블로그 작성 플랫폼",
     stack: ["Next.js 16", "TypeScript", "Supabase", "FSD"],
     description:
-      "블로그 글 120편을 쓰며 TIL·트러블슈팅·딥다이브 형식에 맞춰 매번 글 구조를 새로 고민하는 데 시간이 드는 걸 느껴, 주제와 키워드를 입력하면 이 3가지 형식의 기술 블로그 포스트를 AI가 자동 생성하는 Next.js 풀스택 서비스를 만들었습니다. 기획, 설계, 개발, 배포까지 단독으로 진행했습니다.",
+      "블로그 글 120편을 쓰며 TIL, 트러블슈팅, 딥다이브 형식에 맞춰 매번 글 구조를 새로 고민하는 데 시간이 드는 걸 느껴, 주제와 키워드를 입력하면 이 3가지 형식의 기술 블로그 포스트를 AI가 자동 생성하는 Next.js 풀스택 서비스를 만들었습니다. 기획, 설계, 개발, 배포까지 단독으로 진행했습니다.",
     achievements: [
       [
         t(
@@ -268,7 +268,7 @@ export const projects: Project[] = [
     },
     site: "https://waffle-hyungdonless-front-end.vercel.app/",
     github: "https://github.com/chohyundon/waffle-hyungdonless-frontEnd",
-    type: [t("팀프로젝트 (백엔드1, 디자이너2) · 프론트엔드 담당")],
+    type: [t("팀프로젝트 (백엔드1, 디자이너2) 프론트엔드 담당")],
     period: "2025.01 ~ 2025.04",
     title: "사부작사부작 - 사회초년생 커뮤니티 플랫폼",
     stack: ["Next.js 16", "TypeScript", "Supabase"],
