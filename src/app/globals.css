@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Force light theme for all visitors, regardless of system dark-mode preference. */
+@custom-variant dark (&:where(.force-dark-unused));
+
 html {
   scroll-behavior: smooth;
 }
