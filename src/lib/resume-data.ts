@@ -385,6 +385,7 @@ export const skills: Rich[] = [
   [b("Tools: "), t("Git, GitHub Actions, Playwright, Claude Code, Cursor")],
 ];
 
-export const education = "대진대학교 경제학과 졸업(2018.03 ~ 2025.08)";
+export const education =
+  "대진대학교 경제학과 졸업, 컴퓨터공학과 복수전공(2018.03 ~ 2025.08)";
 
 export const certificates = ["컴퓨터활용 능력 2급"];
