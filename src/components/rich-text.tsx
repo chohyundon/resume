@@ -28,8 +28,7 @@ export function RichText({ segments }: { segments: Rich }) {
               href={seg.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline decoration-neutral-400 underline-offset-2 hover:bg-[rgba(35,131,226,0.1)]"
-            >
+              className="underline decoration-neutral-400 underline-offset-2 hover:bg-[rgba(35,131,226,0.1)]">
               {node}
             </a>
           );

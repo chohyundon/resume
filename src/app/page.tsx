@@ -201,9 +201,6 @@ export default function Home() {
                     <p className="mt-1 text-[rgb(55,53,47)] dark:text-neutral-300">
                       <RichText segments={project.type} />
                     </p>
-                    <p className="text-[rgb(55,53,47)] dark:text-neutral-300">
-                      {project.period}
-                    </p>
                   </div>
 
                   {/* Right: detail */}
@@ -224,12 +221,21 @@ export default function Home() {
                     </p>
                     <Label>프로젝트 소개</Label>
                     <Paragraph>{project.description}</Paragraph>
-                    <Label>{project.achievementsLabel ?? "성과"}</Label>
-                    {project.achievementsIntro && (
-                      <Paragraph>
-                        <RichText segments={project.achievementsIntro} />
-                      </Paragraph>
+                    {project.projectGoals && (
+                      <>
+                        <Label>
+                          {project.projectGoalsLabel ? (
+                            <RichText segments={project.projectGoalsLabel} />
+                          ) : (
+                            "프로젝트 목표"
+                          )}
+                        </Label>
+                        <Paragraph>
+                          <RichText segments={project.projectGoals} />
+                        </Paragraph>
+                      </>
                     )}
+                    <Label>{project.achievementsLabel ?? "성과"}</Label>
                     <Bullets items={project.achievements} />
                     <Label>
                       <RichText segments={project.aiWorkflowLabel} />
