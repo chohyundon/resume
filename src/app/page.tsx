@@ -74,7 +74,7 @@ function Label({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   return (
-    <div className="flex flex-1 justify-center bg-white px-4 py-12 dark:bg-neutral-950 sm:px-16 sm:py-20 print:px-0 print:py-0">
+    <div className="flex flex-1 justify-center bg-white px-4 py-12 dark:bg-neutral-950 sm:px-16 sm:py-20 print:p-[1.2cm]">
       <main className="w-full max-w-225 break-keep font-[system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Helvetica,Arial,sans-serif]">
         {/* Page title */}
         <h1 className="mb-8 text-4xl font-bold text-[rgb(55,53,47)] dark:text-neutral-50 sm:text-5xl">
@@ -82,7 +82,7 @@ export default function Home() {
         </h1>
 
         {/* Contact | About Me */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-[31%_69%] print:block!">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-[31fr_69fr] print:block!">
           <div className="flex flex-col gap-2 print:mb-6">
             <Image
               src="/images/profile.jpg"
@@ -165,7 +165,7 @@ export default function Home() {
                 key={project.shortName}
                 className={i > 0 ? "print:break-before-page" : undefined}>
                 {i > 0 && <Divider />}
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-[25%_75%] print:block!">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-[25fr_75fr] print:block!">
                   {/* Left: identity */}
                   <div className="flex flex-col gap-1.5 print:mb-4 print:break-inside-avoid">
                     <h3 className="text-lg font-semibold text-[rgb(55,53,47)] dark:text-neutral-100">

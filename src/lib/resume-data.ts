@@ -377,15 +377,14 @@ export const projects: Project[] = [
 ];
 
 export const skills: Rich[] = [
-  [b("Language: "), t("JavaScript, TypeScript")],
-  [b("Framework: "), t("React, Next.js (App Router)")],
-  [b("State/Data: "), t("TanStack Query, Zustand")],
+  [b("Frontend: "), t("JavaScript, TypeScript, React, Next.js (App Router)")],
+  [b("State & Data: "), t("TanStack Query, Zustand, Supabase")],
+  [b("Testing & CI: "), t("Playwright, GitHub Actions")],
   [b("Styling: "), t("Tailwind CSS, styled-components")],
-  [b("Backend/Infra: "), t("Supabase, Vercel")],
-  [b("Tools: "), t("Git, GitHub Actions, Playwright, Claude Code, Cursor")],
+  [b("Tools: "), t("Git, Vercel")],
 ];
 
 export const education =
   "대진대학교 | 경제학 전공, 컴퓨터공학 복수전공 (2018.03 ~ 2025.08)";
 
-export const certificates = ["컴퓨터활용 능력 2급"];
+export const certificates = ["컴퓨터활용 능력 2급 (2020.05)"];
