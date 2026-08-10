@@ -11,3 +11,14 @@ html {
   background: #f97316;
   color: #ffffff;
 }
+
+@media print {
+  @page {
+    margin: 1.2cm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

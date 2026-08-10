@@ -16,9 +16,7 @@ export function RichText({ segments }: { segments: Rich }) {
 
         if (seg.highlight) {
           node = (
-            <mark className="rounded-[2px] bg-[rgba(245,149,62,0.4)] px-[1px] text-inherit dark:bg-[rgba(245,149,62,0.35)]">
-              {node}
-            </mark>
+            <span className="text-[#d9730d] dark:text-[#e8a55c]">{node}</span>
           );
         }
 

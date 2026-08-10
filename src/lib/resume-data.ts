@@ -2,7 +2,7 @@ import { b, code, hl, link, t, type LinkMention, type Rich } from "./segments";
 
 export const profile = {
   name: "조현돈",
-  pageTitle: "원인을 보는 개발자, 조현돈입니다.",
+  pageTitle: "기록하며 성장하는 개발자, 조현돈입니다.",
   email: "hyundon12@gmail.com",
 };
 
@@ -325,12 +325,12 @@ export const projects: Project[] = [
     projectGoalsLabel: [b("개발 중점")],
     projectGoals: [
       t("외부 API와 대량 데이터를 사용하는 기능이 많은 만큼, "),
-      hl("사용자가 정보를 불러오거나 액션을 수행할 때 느끼는 대기 시간을 줄이는 데"),
+      hl(
+        "사용자가 정보를 불러오거나 액션을 수행할 때 느끼는 대기 시간을 줄이는 데",
+      ),
       t(" 중점을 두었습니다. 이를 위해 "),
       hl("캐싱, 서버 페이지네이션, Optimistic UI"),
-      t(
-        "를 적용해 반복 요청과 대량 데이터 호출 구조를 개선했습니다.",
-      ),
+      t("를 적용해 반복 요청과 대량 데이터 호출 구조를 개선했습니다."),
     ],
     achievements: [
       [
@@ -386,6 +386,6 @@ export const skills: Rich[] = [
 ];
 
 export const education =
-  "대진대학교 경제학과 졸업, 컴퓨터공학과 복수전공(2018.03 ~ 2025.08)";
+  "대진대학교 | 경제학 전공, 컴퓨터공학 복수전공 (2018.03 ~ 2025.08)";
 
 export const certificates = ["컴퓨터활용 능력 2급"];

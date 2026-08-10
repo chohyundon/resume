@@ -22,7 +22,7 @@ function Divider() {
 
 function SectionHeader({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-4 mt-2 flex items-center gap-2 text-2xl font-bold text-[rgb(55,53,47)] dark:text-neutral-100">
+    <h2 className="mb-4 mt-2 flex items-center gap-2 text-2xl font-bold text-[rgb(55,53,47)] dark:text-neutral-100 print:break-after-avoid">
       {children}
       <span className="size-2.5 shrink-0 rounded-full bg-[#d9730d] dark:bg-[#e8a55c]" />
     </h2>
@@ -31,7 +31,7 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
 
 function SubHeader({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="mb-2 mt-4 text-lg font-semibold text-[rgb(55,53,47)] dark:text-neutral-100">
+    <h3 className="mb-2 mt-4 text-lg font-semibold text-[rgb(55,53,47)] dark:text-neutral-100 print:break-after-avoid">
       {children}
     </h3>
   );
@@ -39,9 +39,11 @@ function SubHeader({ children }: { children: React.ReactNode }) {
 
 function Bullets({ items }: { items: Rich[] }) {
   return (
-    <ul className="my-2 flex flex-col gap-1.5">
+    <ul className="my-2 flex flex-col gap-1.5 print:block!">
       {items.map((item, i) => (
-        <li key={i} className="flex gap-2.5 pl-1 leading-relaxed">
+        <li
+          key={i}
+          className="flex gap-2.5 pl-1 leading-relaxed print:mb-1.5 print:break-inside-avoid">
           <span className="select-none text-[rgb(55,53,47)]/60 dark:text-neutral-500">
             •
           </span>
@@ -56,7 +58,7 @@ function Bullets({ items }: { items: Rich[] }) {
 
 function Paragraph({ children }: { children: React.ReactNode }) {
   return (
-    <p className="my-1.5 leading-relaxed text-[rgb(55,53,47)] dark:text-neutral-300">
+    <p className="my-1.5 leading-relaxed text-[rgb(55,53,47)] dark:text-neutral-300 print:break-inside-avoid">
       {children}
     </p>
   );
@@ -64,7 +66,7 @@ function Paragraph({ children }: { children: React.ReactNode }) {
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-1 mt-7 font-medium text-[rgb(55,53,47)] dark:text-neutral-200">
+    <p className="mb-1 mt-7 font-medium text-[rgb(55,53,47)] dark:text-neutral-200 print:break-after-avoid">
       {children}
     </p>
   );
@@ -72,7 +74,7 @@ function Label({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   return (
-    <div className="flex flex-1 justify-center bg-white px-4 py-12 dark:bg-neutral-950 sm:px-16 sm:py-20">
+    <div className="flex flex-1 justify-center bg-white px-4 py-12 dark:bg-neutral-950 sm:px-16 sm:py-20 print:px-0 print:py-0">
       <main className="w-full max-w-225 break-keep font-[system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Helvetica,Arial,sans-serif]">
         {/* Page title */}
         <h1 className="mb-8 text-4xl font-bold text-[rgb(55,53,47)] dark:text-neutral-50 sm:text-5xl">
@@ -80,8 +82,8 @@ export default function Home() {
         </h1>
 
         {/* Contact | About Me */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-[31%_69%]">
-          <div className="flex flex-col gap-2">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-[31%_69%] print:block!">
+          <div className="flex flex-col gap-2 print:mb-6">
             <Image
               src="/images/profile.jpg"
               alt={profile.name}
@@ -106,9 +108,9 @@ export default function Home() {
 
           <div>
             <SectionHeader>About Me</SectionHeader>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 print:block!">
               {aboutMe.map((item, i) => (
-                <div key={i}>
+                <div key={i} className="print:mb-5 print:break-inside-avoid">
                   <SubHeader>
                     <RichText segments={item.subheading} />
                   </SubHeader>
@@ -129,15 +131,15 @@ export default function Home() {
         {/* Experience */}
         <section>
           <SectionHeader>Experience</SectionHeader>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 print:block!">
             {experience.map((exp, i) => (
-              <div key={i}>
+              <div key={i} className="print:mb-6 print:break-inside-avoid">
                 {exp.headingLevel === "h3" ? (
-                  <h3 className="text-lg font-semibold text-[rgb(55,53,47)] dark:text-neutral-100">
+                  <h3 className="text-lg font-semibold text-[rgb(55,53,47)] dark:text-neutral-100 print:break-after-avoid">
                     <RichText segments={exp.heading} />
                   </h3>
                 ) : (
-                  <p className="text-[rgb(55,53,47)] dark:text-neutral-300">
+                  <p className="text-[rgb(55,53,47)] dark:text-neutral-300 print:break-after-avoid">
                     <RichText segments={exp.heading} />
                   </p>
                 )}
@@ -157,13 +159,15 @@ export default function Home() {
         {/* Projects */}
         <section>
           <SectionHeader>Projects</SectionHeader>
-          <div className="flex flex-col">
+          <div className="flex flex-col print:block!">
             {projects.map((project, i) => (
-              <div key={project.shortName}>
+              <div
+                key={project.shortName}
+                className={i > 0 ? "print:break-before-page" : undefined}>
                 {i > 0 && <Divider />}
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-[25%_75%]">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-[25%_75%] print:block!">
                   {/* Left: identity */}
-                  <div className="flex flex-col gap-1.5">
+                  <div className="flex flex-col gap-1.5 print:mb-4 print:break-inside-avoid">
                     <h3 className="text-lg font-semibold text-[rgb(55,53,47)] dark:text-neutral-100">
                       {project.shortName}
                     </h3>
