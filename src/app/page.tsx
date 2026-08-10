@@ -219,6 +219,13 @@ export default function Home() {
                         </span>
                       ))}
                     </p>
+                    <Image
+                      src={project.screenshot.src}
+                      alt={`${project.shortName} 스크린샷`}
+                      width={project.screenshot.width}
+                      height={project.screenshot.height}
+                      className="mt-3 w-full rounded-lg border border-[rgba(55,53,47,0.09)] dark:border-neutral-800"
+                    />
                     <Label>프로젝트 소개</Label>
                     <Paragraph>{project.description}</Paragraph>
                     {project.projectGoals && (

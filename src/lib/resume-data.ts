@@ -192,6 +192,7 @@ export const experience: {
 export type Project = {
   shortName: string;
   logo: { src: string; width: number; height: number; dark?: boolean };
+  screenshot: { src: string; width: number; height: number };
   site: string;
   github: string;
   type: Rich;
@@ -216,6 +217,11 @@ export const projects: Project[] = [
       width: 520,
       height: 160,
       dark: true,
+    },
+    screenshot: {
+      src: "/images/blogai-screenshot.png",
+      width: 3186,
+      height: 2010,
     },
     site: "https://www.blogai.store/",
     github: "https://github.com/chohyundon/BlogAi",
@@ -293,6 +299,11 @@ export const projects: Project[] = [
       width: 112,
       height: 40,
       dark: true,
+    },
+    screenshot: {
+      src: "/images/sabujak-screenshot.png",
+      width: 3182,
+      height: 2010,
     },
     site: "https://waffle-hyungdonless-front-end.vercel.app/",
     github: "https://github.com/chohyundon/waffle-hyungdonless-frontEnd",
