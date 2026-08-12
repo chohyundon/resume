@@ -4,6 +4,7 @@ export type Segment = {
   code?: boolean;
   highlight?: boolean;
   href?: string;
+  italic?: boolean;
 };
 
 export type Rich = Segment[];

@@ -11,6 +11,7 @@ import {
   profile,
   projects,
   skills,
+  activities,
 } from "@/lib/resume-data";
 import type { Rich } from "@/lib/segments";
 
@@ -37,15 +38,21 @@ function SubHeader({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Bullets({ items }: { items: Rich[] }) {
+function Bullets({
+  items,
+  ordered = false,
+}: {
+  items: Rich[];
+  ordered?: boolean;
+}) {
   return (
     <ul className="my-2 flex flex-col gap-1.5 print:block!">
       {items.map((item, i) => (
         <li
           key={i}
-          className="flex gap-2.5 pl-1 leading-relaxed print:mb-1.5 print:break-inside-avoid">
+          className="flex gap-2.5 pl-1 text-sm leading-relaxed print:mb-1.5 print:break-inside-avoid">
           <span className="select-none text-[rgb(55,53,47)]/60 dark:text-neutral-500">
-            •
+            {ordered ? `${i + 1}.` : "•"}
           </span>
           <span className="text-[rgb(55,53,47)] dark:text-neutral-300">
             <RichText segments={item} />
@@ -58,7 +65,7 @@ function Bullets({ items }: { items: Rich[] }) {
 
 function Paragraph({ children }: { children: React.ReactNode }) {
   return (
-    <p className="my-1.5 leading-relaxed text-[rgb(55,53,47)] dark:text-neutral-300 print:break-inside-avoid">
+    <p className="my-1.5 text-sm leading-relaxed text-[rgb(55,53,47)] dark:text-neutral-300 print:break-inside-avoid">
       {children}
     </p>
   );
@@ -119,7 +126,7 @@ export default function Home() {
                       <RichText segments={item.paragraph} />
                     </Paragraph>
                   )}
-                  <Bullets items={item.bullets} />
+                  <Bullets items={item.bullets} ordered={item.orderedBullets} />
                 </div>
               ))}
             </div>
@@ -149,6 +156,33 @@ export default function Home() {
                   </p>
                 )}
                 <Bullets items={exp.bullets} />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <Divider />
+
+        <section>
+          <SectionHeader>Activities</SectionHeader>
+          <div className="flex flex-col gap-6 print:block!">
+            {activities.map((activity, i) => (
+              <div key={i} className="print:mb-6 print:break-inside-avoid">
+                {activity.headingLevel === "h3" ? (
+                  <h3 className="text-lg font-semibold text-[rgb(55,53,47)] dark:text-neutral-100 print:break-after-avoid">
+                    <RichText segments={activity.heading} />
+                  </h3>
+                ) : (
+                  <p className="text-[rgb(55,53,47)] dark:text-neutral-300 print:break-after-avoid">
+                    <RichText segments={activity.heading} />
+                  </p>
+                )}
+                {activity.period && (
+                  <p className="mt-0.5 text-[rgb(55,53,47)] dark:text-neutral-300">
+                    {activity.period}
+                  </p>
+                )}
+                <Bullets items={activity.bullets} />
               </div>
             ))}
           </div>
@@ -230,8 +264,7 @@ export default function Home() {
                       height={project.screenshot.height}
                       className="mt-3 w-full rounded-lg border border-[rgba(55,53,47,0.09)] dark:border-neutral-800"
                     />
-                    <Label>프로젝트 소개</Label>
-                    <Paragraph>{project.description}</Paragraph>
+
                     {project.projectGoals && (
                       <>
                         <Label>
@@ -246,12 +279,10 @@ export default function Home() {
                         </Paragraph>
                       </>
                     )}
-                    <Label>{project.achievementsLabel ?? "성과"}</Label>
-                    <Bullets items={project.achievements} />
                     <Label>
-                      <RichText segments={project.aiWorkflowLabel} />
+                      <RichText segments={project.achievementsLabel ?? []} />
                     </Label>
-                    <Bullets items={project.aiWorkflow} />
+                    <Bullets items={project.achievements} />
                   </div>
                 </div>
               </div>
