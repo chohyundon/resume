@@ -21,4 +21,10 @@ html {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
 }
