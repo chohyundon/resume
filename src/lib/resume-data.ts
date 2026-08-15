@@ -36,8 +36,10 @@ export const aboutMe: {
     bullets: [
       [
         t(
-          "IT 동아리 신입 부원을 대상으로 Git 브랜치 전략과 커밋 컨벤션 세션을 준비하면서, 브랜치 전략과 커밋 컨벤션을 사용하고 있었지만, 각각의 기준과 이유를 설명하는 데 어려움이 있었습니다. 이를 계기로 배운 내용과 문제를 해결한 과정을 기록하기 시작했고, 기술 블로그 120편 이상을 작성하고 유튜브 쇼츠 8편을 제작했습니다.",
+          "IT 동아리 신입 부원을 대상으로 Git 브랜치 전략과 커밋 컨벤션 세션을 준비하면서, 브랜치 전략과 커밋 컨벤션을 사용하고 있었지만, 각각의 기준과 이유를 설명하는 데 어려움이 있었습니다. 이를 계기로 배운 내용과 문제를 해결한 과정을 기록하기 시작했고, ",
         ),
+        b("기술 블로그 120편 이상을 작성하고 유튜브 쇼츠 8편을 제작"),
+        t("했습니다."),
       ],
     ],
   },
@@ -57,13 +59,17 @@ export const aboutMe: {
     bullets: [
       [
         t(
-          "FSD 구조에서 계층 간 import와 Public API 규칙 위반을 반복해서 확인하는 반복 작업을, Claude Code 기반 검증 도구를 만들어 자동으로 검사했습니다. GitHub Actions에 E2E 테스트와 아키텍처 검증을 연동해 PR마다 규칙 위반과 주요 기능 동작을 확인했습니다.",
+          "FSD 구조에서 계층 간 import와 Public API 규칙 위반을 반복해서 확인하는 반복 작업을 줄이기 위해, ",
         ),
+        b("정적 규칙으로 1차 필터링하고 애매한 케이스는 Claude Code로 판단하는 검증 도구"),
+        t("를 만들었습니다. GitHub Actions에 연동해 PR마다 규칙 위반과 E2E 테스트, 주요 기능 동작을 자동으로 확인했습니다."),
       ],
       [
-        t(
-          "사부작사부작에서 AI로 코드를 수정할 때 예상하지 않은 파일까지 변경되는 경우를 줄이기 위해 Plan-First Workflow를 적용했습니다. Playwright MCP로 주요 사용자 흐름을 확인해 테스트 시나리오를 정리하고 E2E 테스트 30건을 구축했습니다.",
-        ),
+        t("사부작사부작에서 AI로 코드를 수정할 때 예상하지 않은 파일까지 변경되는 경우를 줄이기 위해 "),
+        b("Plan-First Workflow"),
+        t("를 적용했습니다. Playwright MCP로 주요 사용자 흐름을 확인해 테스트 시나리오를 정리하고 "),
+        b("E2E 테스트 30건을 구축"),
+        t("했습니다."),
       ],
     ],
   },
@@ -83,7 +89,7 @@ export const experience: {
       [
         b("BlogAI를 "),
         b("기획, UI 설계부터 프론트엔드, 백엔드 개발, 배포까지 단독으로 진행"),
-        t("했습니다."),
+        t("했습니다. (자세한 내용은 위 Projects 섹션 참고)"),
       ],
       [
         t("중간 QA에서 발견한 "),
@@ -104,9 +110,9 @@ export const experience: {
       ],
       [
         t(
-          "로그인 연동 중 발생한 CORS 오류를 네트워크 요청과 서버 설정까지 함께 점검해 ",
+          "소셜 로그인 완료 후 리다이렉트되는 과정에서 인증이 유지되지 않는 오류가 발생해, 요청에 인증 정보(credentials)를 포함하도록 프론트엔드 설정을 조정하고 네트워크 요청과 백엔드 쿠키/CORS 설정까지 함께 점검해 ",
         ),
-        b("원인을 해결"),
+        b("백엔드 설정 문제였던 근본 원인을 파악하고 해결"),
         t("했습니다."),
       ],
     ],
@@ -117,9 +123,9 @@ export const experience: {
     period: "2024.08 – 2025.03",
     bullets: [
       [
-        t(
-          "HTML, CSS, JavaScript부터 React, TypeScript까지 학습하며 프론트엔드 개발의 기초를 익혔습니다.",
-        ),
+        t("HTML, CSS, JavaScript부터 "),
+        b("React, TypeScript까지 학습하며 프론트엔드 개발의 기초를 익혔"),
+        t("습니다."),
       ],
       [
         t("팀 프로젝트를 통해 "),
@@ -141,12 +147,12 @@ export const activities: {
   {
     heading: [t("GDG on Campus | Core Member, Frontend Lead")],
     headingLevel: "h3",
-    period: "2025.08 – 2026.07",
+    period: "2025.01 – 2026.07",
     bullets: [
       [
-        t(
-          "프론트엔드 리드로 부원들의 개발 진행을 지원하고, Git Flow와 GitHub Flow를 비교한 브랜치 PR 전략 세션을 진행했습니다. ",
-        ),
+        t("프론트엔드 리드로 부원들의 개발 진행을 지원하고, "),
+        b("Git Flow와 GitHub Flow를 비교한 브랜치 PR 전략 세션을 진행"),
+        t("했습니다."),
       ],
     ],
   },
@@ -157,8 +163,10 @@ export const activities: {
     bullets: [
       [
         t(
-          "React와 Three.js를 활용해 3D 공학 데이터를 웹에서 시각화하는 핵심 화면과 사용자 흐름을 구현했으며, 일주일 내 MVP를 완성해 예선을 통과하고 본선에 진출했습니다. ",
+          "React와 Three.js를 활용해 3D 공학 데이터를 웹에서 시각화하는 핵심 화면과 사용자 흐름을 구현했으며, ",
         ),
+        b("일주일 내 MVP를 완성해 예선을 통과하고 본선에 진출"),
+        t("했습니다."),
       ],
     ],
   },
@@ -198,17 +206,17 @@ export const projects: Project[] = [
     },
     site: "https://www.blogai.store/",
     github: "https://github.com/chohyundon/BlogAi",
-    type: [t("개인프로젝트")],
+    type: [t("멋쟁이사자처럼 인턴십 17기 프로젝트 (개인)")],
     period: "2026.01 ~ 2026.06",
     title: "BlogAi - AI 기술 블로그 작성 플랫폼",
     stack: ["Next.js 16", "TypeScript", "Supabase", "FSD"],
     description:
-      "블로그 글 120편을 작성하며 반복적으로 글 구조를 설계하는 불편을 줄이기 위해 만든 AI 기술 블로그 작성 서비스입니다. 기획, 설계, 개발, 배포까지 단독으로 진행했습니다.",
+      "멋쟁이사자처럼 인턴십 17기에서 블로그 글 120편을 작성하며 반복적으로 글 구조를 설계하는 불편을 줄이기 위해 만든 AI 기술 블로그 작성 서비스입니다. 기획, 설계, 개발, 배포까지 단독으로 진행했고, 인턴십 종료 후에도 개인적으로 리팩토링을 이어가고 있습니다.",
     achievementsLabel: [b("주요 개선")],
     projectGoalsLabel: [b("프로젝트 개요 및 개발 중점")],
     projectGoals: [
       t(
-        "블로그 글 120편을 작성하며 반복적으로 글 구조를 설계하는 불편을 줄이기 위해 만든 AI 기술 블로그 작성 서비스입니다. 기획 설계 개발 배포까지 단독으로 진행했으며, 생성 과정의 상태 유지와 체감 응답 속도, 서비스가 커져도 유지할 수 있는 구조를 중점적으로 개선했습니다.",
+        "멋쟁이사자처럼 인턴십 17기에서 블로그 글 120편을 작성하며 반복적으로 글 구조를 설계하는 불편을 줄이기 위해 만든 AI 기술 블로그 작성 서비스입니다. 기획 설계 개발 배포까지 단독으로 진행했으며, 생성 과정의 상태 유지와 체감 응답 속도, 서비스가 커져도 유지할 수 있는 구조를 중점적으로 개선했습니다. 인턴십 종료 후에도 개인적으로 리팩토링을 이어가고 있습니다.",
       ),
     ],
     achievements: [
@@ -233,9 +241,9 @@ export const projects: Project[] = [
         t(")"),
       ],
       [
-        t("폰트 서브셋과 favicon을 경량화해 "),
-        hl("폰트 리소스 4,090KB → 1,048KB, favicon 로딩 27초 → 168ms로 개선"),
-        t("했습니다. ("),
+        t("폰트 서브셋과 favicon 캐싱 설정을 점검해 "),
+        hl("폰트 리소스 4,090KB → 1,048KB로 경량화"),
+        t("하고, favicon 요청 시 발생하던 비정상적인 로딩 지연을 해결했습니다. ("),
         link(
           "Link",
           "https://velog.io/@gse06044/Next.js-font%EC%99%80-icon-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%8B%9C%EC%BC%9C%EB%B3%B4%EA%B8%B0",
@@ -266,7 +274,7 @@ export const projects: Project[] = [
     },
     site: "https://waffle-hyungdonless-front-end.vercel.app/",
     github: "https://github.com/chohyundon/waffle-hyungdonless-frontEnd",
-    type: [t("팀프로젝트 (백엔드1, 디자이너2) 프론트엔드 담당")],
+    type: [t("GDG on Campus 팀프로젝트 (백엔드1, 디자이너2) 프론트엔드 담당")],
     period: "2025.01 ~ 2025.04",
     title: "사부작사부작 - 사회초년생 커뮤니티 플랫폼",
     stack: ["Next.js 16", "TypeScript", "Supabase"],
@@ -332,5 +340,3 @@ export const skills: Rich[] = [
 
 export const education =
   "대진대학교 | 경제학 전공, 컴퓨터공학 복수전공 (2018.03 ~ 2025.08)";
-
-export const certificates = ["컴퓨터활용 능력 2급 (2020.05)"];
