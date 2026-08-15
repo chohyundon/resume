@@ -2,7 +2,7 @@ import { b, code, hl, link, t, type LinkMention, type Rich } from "./segments";
 
 export const profile = {
   name: "조현돈",
-  pageTitle: "기록하며 성장하는 개발자, 조현돈입니다.",
+  pageTitle: "만들고 검증하며 성장하는 프론트엔드 개발자, 조현돈입니다.",
   email: "hyundon12@gmail.com",
 };
 

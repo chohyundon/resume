@@ -238,7 +238,7 @@ export default function Home() {
         <Divider />
 
         {/* Experience */}
-        <section className="print:break-inside-avoid">
+        <section>
           <SectionHeader>Experience</SectionHeader>
           <div className="flex flex-col gap-6 print:block!">
             {experience.map((exp, i) => (
@@ -265,7 +265,7 @@ export default function Home() {
 
         <Divider />
 
-        <section className="print:break-inside-avoid">
+        <section>
           <SectionHeader>Activities</SectionHeader>
           <div className="flex flex-col gap-6 print:block!">
             {activities.map((activity, i) => (
